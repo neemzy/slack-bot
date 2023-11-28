@@ -1,0 +1,13 @@
+{
+  "name": "slack-bot",
+  "description": "Slack bot example and tutorial",
+  "author": "neemzy <tom.panier@free.fr>",
+  "private": true,
+  "scripts": {
+    "start": "node ."
+  },
+  "dependencies": {
+    "@slack/bolt": "^3.15.0",
+    "request": "^2.88.2"
+  }
+}
