@@ -35,3 +35,7 @@ $ npm start
 ```
 
 `@mention`ing the bot in the chosen channel (once the former has joined the latter) will have it reply using ChatGPT.
+
+## Tutorial
+
+Read [the tutorial](tutorial.md) to learn how to create a Slack application, get all the information required above, and make your own bot with whatever feature you fancy!

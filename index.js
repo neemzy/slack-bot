@@ -34,6 +34,16 @@ const app = new App({
   socketMode: true,
 });
 
+/*/ part 2
+app.message(async ({message, say}) => {
+  // Filter out messages in different channels and invalid stuff
+  if (message.channel !== config.slack.channel || !message.user) {
+    return;
+  }
+
+  await say(`<@${message.user}> a dit : "${message.text}"`);
+});*/
+
 app.event("app_mention", async ({event, say}) => {
   // Filter out messages in different channels and invalid stuff
   if (event.channel !== config.slack.channel || !event.user) {
@@ -47,4 +57,10 @@ app.event("app_mention", async ({event, say}) => {
 
 (async () => {
   await app.start();
+
+  /*/ part 1
+  await app.client.chat.postMessage({
+    text: "hello world",
+    channel: config.slack.channel,
+  });*/
 })();
